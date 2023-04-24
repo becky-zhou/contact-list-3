@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-
 import Table from 'react-bootstrap/Table'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NotFound from "./NotFound"; 
@@ -37,7 +36,7 @@ const App =()=> {
 }
 
 
-const Home = (navigateToContactInfo) => { 
+const Home = () => { 
 
   return(
     <Table striped bordered hover className="table table-hover">
@@ -54,7 +53,7 @@ const Home = (navigateToContactInfo) => {
       {sample.contacts.map((contactInfo)=> (
           <tr className="preview" key={contactInfo.id} >
           <td>{ contactInfo.id }</td>
-          <td> <img src={contactInfo.profileUrl} fluid rounded
+          <td> <img src={contactInfo.profileUrl} 
           width={200} height={200}  alt="Profile" />
           </td>
           <td>{ contactInfo.name }</td>
